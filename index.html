@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <center><h1>Make Juice</h1></center>
+        <button onclick="recipeRandomizer() ">Make a Random Juice</button>
+        <h3>You need:</h3>
+        <ul>
+            <li id="liquid"></li>
+            <li id ="fruit"></li>
+            <li id ="herb"></li>
+            <li id ="citrus"></li>
+            <li id ="leafyGreen"></li>
+        </ul>
+        <script>
+
+            function getran()
+           
+           function recipeRandomizer() {
+                var fruits = ['coconut', 'grapes', 'bananas', 'blueberries', 'raspberries', 'strawberries', 'kiwi', 'pineapple', 'oranges', 'passionfruit', 'papaya'];
+                var liquids = ["coconut water", "water", "almond milk"];
+                var herbs = ["mint", "rosemary", "ginger"];
+                var citrusFruits = ['mandarin', 'lemon', 'lime'];
+                var leafyGreens = ["spinach", "kale"];
+
+                var fruit = fruits[Math.floor(Math.random()*fruits.length)];
+                var liquid = liquids[Math.floor(Math.random()*liquids.length)];
+                var herb = herbs[Math.floor(Math.random()*herbs.length)];
+                var citrus = citrusFruits[Math.floor(Math.random()*citrusFruits.length)];
+                var leafyGreen = leafyGreens[Math.floor(Math.random()*leafyGreens.length)];
+
+
+                document.getElementById("liquid").innerHTML="250 ml of " + liquid;
+                document.getElementById("fruit").innerHTML= "100 grams of " + fruit; 
+                document.getElementById("herb").innerHTML= "10 grams of " + herb; 
+                document.getElementById("citrus").innerHTML= "The juice of one " + citrus;
+                document.getElementById("leafyGreen").innerHTML= "30 grams of " + leafyGreen;  
+           }
+
+
+
+
+            // var fruit = [banana, raspberries, blueberries, pineapple];
+            // var item = items[Math.floor(Math.random()*items.length)];
+
+            // var firstname = document.getElementById('firstname').value;
+            // var entry = document.createElement('li');
+            // entry.appendChild(document.createTextNode(firstname));
+            // list.appendChild(entry);
+          </script>
+    </body>
+</html>
